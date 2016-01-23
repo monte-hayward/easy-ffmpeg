@@ -12,9 +12,16 @@ curl 'http://johnvansickle.com/ffmpeg/releases/ffmpeg-release-32bit-static.tar.x
 tar xf ffmpeg-32.tar.xz && 
 mv ffmpeg-*-32bit-static/ffmpeg ffmpeg-*-32bit-static/ffprobe ia32
 curl 'http://johnvansickle.com/ffmpeg/releases/ffmpeg-release-64bit-static.tar.xz' -o ffmpeg-64.tar.xz && 
-tar xf ffmpeg-64.tar.xz && 
+tar xf ffmpeg-64.tar.xz &&
 mv ffmpeg-*-64bit-static/ffmpeg ffmpeg-*-64bit-static/ffprobe x64
 rm -rf ffmpeg-*-*-static *.tar.xz
+curl 'https://codeload.github.com/unnu/flvtool2/zip/master' -o flvtool2.master.zip &&
+unzip flvtool2.master.zip &&
+cp flvtool2-master/bin/flvtool2  ia32/  &&
+cp flvtool2-master/bin/flvtool2  x64/ &&
+cp flvtool2-master/bin/flvtool2  ../darwin/x64/ &&
+cp flvtool2-master/flvtool2.exe  ../win32/ia32/
+
 
 cd ../darwin
 curl "http://evermeet.cx/ffmpeg/ffmpeg-$VERSION.7z" -o ffmpeg.7z && 
