@@ -3,3 +3,4 @@ node_modules
 *.log
 ffmpeg/
 ffmpeg.tgz
+flvtool2-master
